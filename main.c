@@ -14,12 +14,14 @@ int main(int argc, const char * argv[]) {
     struct voo teste[50];
     char id[10];
     for (int i=0; i<10; i++) {
-        id[i]=i;
+        id[i]=64+i;
     }
     InicializarDados(teste);
-    printf("%d",IncluirReserva(teste, id , 1001));
-    printf("%d",ExcluirReserva(teste, id , 1001));
-    printf("%d",ExcluirReserva(teste, id , 1001));
+    printf("%d\n",IncluirReserva(teste, id , 1001));
+    ImprimeReserva(teste, 1, 1001);
+    printf("%d\n",ExcluirReserva(teste, id , 1001));
+    printf("%d\n",ExcluirReserva(teste, id , 1001));
+    ImprimeReserva(teste, 2, 1001);
     
     return 0;
 }

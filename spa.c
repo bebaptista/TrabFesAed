@@ -110,17 +110,17 @@ void ImprimeReserva(struct voo aereo[50],int modo, int numerovoo){
     _Bool flag=0;
     switch (modo) {
         case 1:
-            printf("Numero do voo: %d",numerovoo);
+            printf("Numero do voo: %d\n",numerovoo);
             for (int i=0; i<50; i++) {
                 if (numerovoo==aereo[i].numerovoo) {
                     flag=1;
-                    printf("Numero de reservas no voo: %d ",aereo[i].lotacao);
+                    printf("Numero de reservas no voo: %d\n",aereo[i].lotacao);
                     for (int j=0; j<10; j++) {
                         if (aereo[i].poltrona[j].ocupado==1) {
                             for (int k=0; k<10; k++) {
                                 printf("%c",aereo[i].poltrona[j].passageiro[k]);
                             }
-                            
+                            printf("\n");
                         }
                     }
                 }
@@ -131,11 +131,11 @@ void ImprimeReserva(struct voo aereo[50],int modo, int numerovoo){
             break;
             
         case 2:
-            printf("Numero do voo: %d",numerovoo);
+            printf("Numero do voo: %d\n",numerovoo);
             for (int i=0; i<50; i++) {
                 if (numerovoo==aereo[i].numerovoo) {
                     flag=1;
-                    printf("Numero de reservas no voo: %d",aereo[i].lotacao);
+                    printf("Numero de reservas no voo: %d\n",aereo[i].lotacao);
                 }
             }
             if (flag==0) {
