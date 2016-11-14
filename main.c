@@ -12,13 +12,17 @@
 int main(int argc, const char * argv[]) {
     // insert code here...
     struct voo teste[50];
-    char id[10];
-    for (int i=0; i<10; i++) {
-        id[i]=64+i;
+    int id[10];
+    id[0]=77;
+    id[1]=71;
+    for (int i=2; i<10; i++) {
+        id[i]=i;
     }
     InicializarDados(teste);
     printf("%d\n",IncluirReserva(teste, id , 1001));
+    printf("%d\n",IncluirReserva(teste, id , 1002));
     ImprimeReserva(teste, 1, 1001);
+    ImprimeReserva(teste, 3, 1002);
     printf("%d\n",ExcluirReserva(teste, id , 1001));
     printf("%d\n",ExcluirReserva(teste, id , 1001));
     ImprimeReserva(teste, 2, 1001);

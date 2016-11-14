@@ -13,7 +13,7 @@
 
 struct assento {
     _Bool ocupado;
-    char passageiro[10];
+    int passageiro[10];
 };
 
 struct voo {
@@ -24,12 +24,12 @@ struct voo {
 
 void InicializarDados(struct voo aereo[50]);
 
-int IncluirReserva(struct voo aereo[50], char identidade[10], int numerovoo);
+int IncluirReserva(struct voo aereo[50], int identidade[10], int numerovoo);
 
-int ExcluirReserva(struct voo aereo[50], char identidade[10], int numerovoo);
+int ExcluirReserva(struct voo aereo[50], int identidade[10], int numerovoo);
 
 void ImprimeReserva(struct voo aereo[50],int modo, int numerovoo);
 
-_Bool ComparaIdentidade(char identidade1[10], char identidade2[10]);
+_Bool ComparaIdentidade(int identidade1[10], int identidade2[10]);
 
 #endif /* defined(__Sistema_Passagem_Aerea__spa__) */
