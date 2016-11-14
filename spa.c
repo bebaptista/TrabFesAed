@@ -134,15 +134,8 @@ void ImprimeReserva(struct voo aereo[50],int modo, int numerovoo){
             break;
             
         case 2:
-            printf("Numero do voo: %d\n",numerovoo);
             for (int i=0; i<50; i++) {
-                if (numerovoo==aereo[i].numerovoo) {
-                    flag=1;
-                    printf("Numero de reservas no voo: %d\n",aereo[i].lotacao);
-                }
-            }
-            if (flag==0) {
-                printf("Numero de voo inexistente\n");
+                printf("Numero do voo: %d Reservas: %d\n",aereo[i].numerovoo,aereo[i].lotacao);
             }
             break;
         
