@@ -10,15 +10,15 @@
 #include "spa.h"
 
 int main(int argc, char * argv[]) {
-    // insert code here...
     
     _Bool encerra=0;
-    int identidade[10],opcao=0,numerovoo=0,resultado=0,opcaoimpressao=0;
+    int opcao=0,numerovoo=0,resultado=0,opcaoimpressao=0;
+    long int identidade=0;
     struct voo voos[50];
     
     InicializarDados(voos);
     while (encerra==0) {
-        printf("Bem vindo ao sistema de passagem aerea.Digite o numero da opcao que voce deseja e aperte enter\nOpcao 1: Criar nova instancia\nOpcao 2: Incluir reserva\nOpcao 3: Excluir reserva\nOpcao 4: Imprimir Reserva\n");
+        printf("Bem vindo ao sistema de passagem aerea.Digite o numero da opcao que voce deseja e aperte enter\nOpcao 1: Criar nova instancia\nOpcao 2: Incluir reserva\nOpcao 3: Excluir reserva\nOpcao 4: Imprimir Reserva\nOpcao 5: Encerrar\n");
         scanf("%d",&opcao);
         switch (opcao) {
             case 1:
@@ -28,10 +28,8 @@ int main(int argc, char * argv[]) {
             case 2:
                 printf("Digite o numero do voo que se deseja fazer a reserva\n");
                 scanf("%d",&numerovoo);
-                printf("Agora digite cada caracter da identidade seguido de enter\n");
-                for (int i=0; i<10; i++) {
-                    scanf("%d",&identidade[i]);
-                }
+                printf("Agora digite somente os numeros da identidade\n");
+                scanf("%li",&identidade);
                 resultado=IncluirReserva(voos, identidade, numerovoo);
                 if (resultado==2) {
                     printf("A sua reserva foi realizada com sucesso!\n");
@@ -45,10 +43,8 @@ int main(int argc, char * argv[]) {
             case 3:
                 printf("Digite o numero do voo que se deseja excluir a reserva\n");
                 scanf("%d",&numerovoo);
-                printf("Agora digite cada caracter da identidade seguido de enter\n");
-                for (int i=0; i<10; i++) {
-                    scanf("%d",&identidade[i]);
-                }
+                printf("Agora digite somente os numeros da identidade\n");
+                scanf("%li",&identidade);
                 resultado=ExcluirReserva(voos, identidade, numerovoo);
                 if (resultado==2) {
                     printf("A sua reserva foi excluida com sucesso!\n");
@@ -81,14 +77,9 @@ int main(int argc, char * argv[]) {
                 break;
         }
     }
-    
+    /*
     struct voo teste[50];
-    int id[10];
-    id[0]=77;
-    id[1]=71;
-    for (int i=2; i<10; i++) {
-        id[i]=i;
-    }
+    long int id;
     InicializarDados(teste);
     printf("%d\n",IncluirReserva(teste, id , 1001));
     printf("%d\n",IncluirReserva(teste, id , 1002));
@@ -97,6 +88,6 @@ int main(int argc, char * argv[]) {
     printf("%d\n",ExcluirReserva(teste, id , 1001));
     printf("%d\n",ExcluirReserva(teste, id , 1001));
     ImprimeReserva(teste, 2, 1001);
-    
+    */
     return 0;
 }
