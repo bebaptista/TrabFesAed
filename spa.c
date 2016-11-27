@@ -50,7 +50,7 @@ void InicializarDados(struct voo aereo[50]) {
                 aereo[i].poltrona[j].passageiro = 0;
             }
         }
-        printf("%d\n",aereo[i].numerovoo);
+        //printf("%d\n",aereo[i].numerovoo);
     }
 }
 
