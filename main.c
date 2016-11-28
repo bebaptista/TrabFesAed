@@ -101,7 +101,7 @@ int main(int argc, char * argv[]) {
                         else if (opcaoimpressao==3) {
                             ImprimeReserva(voos, 3, numerovoo);
                         }
-                        else printf("Essa opcao nao existe");
+                        else printf("Essa opcao nao existe\n");
                     }
                     else {
                         while (getchar() != '\n');
@@ -109,8 +109,11 @@ int main(int argc, char * argv[]) {
                     }
                     break;
                     
-                default:
+                case 5:
                     encerra=1;
+                    break;
+                
+                default:
                     break;
             }
         }
